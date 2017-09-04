@@ -1,0 +1,72 @@
+{
+  "name": "coffitivity-offline",
+  "productName": "coffitivity-offline",
+  "version": "1.0.0",
+  "description": "An unnoficial Coffitivity.com music app for your computer which works offline.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "coffitivity",
+    "coffitivity offline",
+    "productive"
+  ],
+  "author": {
+    "name": "siwalik",
+    "email": "hi@siwalik.in",
+    "url": "siwalik.in"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siwalikm/coffitivity-offline.git"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "dmg"
+        ],
+        "linux": [
+          "deb",
+          "rpm",
+          "flatpak"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm",
+        "name": "Coffitivity Offline",
+        "icon": "./assets/icon.png.icns"
+      },
+      "electronWinstallerConfig": {
+        "name": "coffitivity_offline",
+        "setupExe": "coffitivity_offline.exe",
+        "description": "Coffitivity Offline",
+        "iconUrl": "./assets/icon.ico",
+        "setupIcon": "./assets/icon.ico",
+        "noMsi": true
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {}
+    }
+  },
+  "dependencies": {
+    "electron-compile": "^6.4.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^4.0.0",
+    "electron-prebuilt-compile": "1.7.5",
+    "eslint": "^3.19.0"
+  }
+}

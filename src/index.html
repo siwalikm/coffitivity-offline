@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="../assets/webfonts/fontello/css/fontello.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script>
+    require('./renderer.js')
+  </script>
+  <script src="./player.js"></script>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <h1 class="mainTitle">Coffitivity Offline</h1>
+
+
+  <span class="p1">
+  <p class="mainTitle__subtext">Please select your cafe</p>
+
+  <div class="musicOptBox" id="murmur" onclick="triggerPage2(this.id)">
+    <p class="musicOptBox__title">Morning Murmur</p>
+    <p class="musicOptBox__desc">A gentle hum gets the day going</p>
+    <i class="arrow-right icon-right-open"></i>
+  </div>
+
+  <div class="musicOptBox" id="lunch" onclick="triggerPage2(this.id)">
+    <p class="musicOptBox__title">Lunchtime Lounge</p>
+    <p class="musicOptBox__desc">Busting chatter of the lunchtime rush</p>
+    <i class="arrow-right icon-right-open"></i>
+  </div>
+
+  <div class="musicOptBox" id="univ" onclick="triggerPage2(this.id)">
+    <p class="musicOptBox__title">University Undertones</p>
+    <p class="musicOptBox__desc">The scholarly sounds of a campus cafe</p>
+    <i class="arrow-right icon-right-open"></i>
+  </div>
+</span>
+
+  <span class="p2">
+    <img width="100%" src="../assets/headphones1.png">
+    <div class="pausePlayContainer">
+      <i class="pausePlayBtn icon-play"></i><i class="pausePlayBtn icon-pause"></i>
+    </div>
+    <div class="musicOptBox p2" onclick="triggerPage1()">
+      <p class="musicOptBox__title"></p>
+      <p class="musicOptBox__desc"></p>
+      <i class="arrow-left icon-left-open"></i>
+    </div>
+</span>
+
+  <footer>
+    <a rel="noreferrer" target="_blank" href="https://twitter.com/intent/tweet?text=Checkout%20@Coffitivity%27s%20unofficial%20desktop%20app%20which%20runs%20without%20internet.%20%F0%9F%8E%A7%20%F0%9F%9A%80%20@siwalik%20www.bit.ly/CoffitivityOffline"><i title="Spread the love" class="footer-icon icon-twitter"></i></a>
+
+    <a rel="noreferrer" target="_blank" href="https://github.com/siwalikm/coffitivity-offline/"><i title="Fork me on Github" class="footer-icon icon-github-circled"></i></a>
+
+  </footer>
+</body>
+
+</html>
