@@ -5,6 +5,7 @@ let triggerPage2 = (id) => {
   }
   audio = new Audio('../assets/'+id+'.mp3');
   audio.play();
+  audio.loop = true;
   $pause.style.visibility = 'visible';
   $play.style.visibility = 'hidden';
   let elem = document.querySelector('#'+id);
