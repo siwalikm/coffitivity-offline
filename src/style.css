@@ -11,11 +11,36 @@
   src: url('../assets/webfonts/roboto.woff2') format('woff2');
 }
 
+i.icon-cancel {
+    color: white;
+    cursor: pointer;
+    float: right;
+    z-index: 100;
+    position: relative;
+    margin-top: -333px;
+    padding: 10px;
+}
+
+.page3 .musicOptBox{
+    height: 350px;
+    z-index: 10;
+    background: #303c50;
+    position: absolute;
+    margin-top: -333px;
+    margin-left: 0px;
+    width: 250px;
+}
+
+.page3 .musicOptBox:hover {
+  cursor: default;
+  box-shadow: none;
+}
+
 .player {
   visibility: hidden;
 }
 
-.p2 {
+.page2, .page3 {
   display: none;
   transition: 1s all;
 }
@@ -23,14 +48,15 @@
 html {
   -webkit-app-region: drag;
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(-245deg, #00a79d 10%, #86a4e3 100%);
+  background: linear-gradient(-245deg, #00a798 10%, #81a4e0 100%);
+  /*background-image: src('../assets');*/
   height: 100%;
   width: 100%;
 }
 
 .footer-icon {
-    font-size: 25px;
-    color: black;
+    font-size: 22px;
+    color: rgb(48, 60, 80);
     transition: .2s ease;
 }
 
@@ -61,18 +87,20 @@ p {
 }
 
 .mainTitle__subtext {
-  margin: 28px 0 0 0;
-  color: white;
-  font-size: 14px;
+  margin: 38px  0 30px 0;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0.2px;
   font-weight: 600;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  text-shadow: 6px 6px 20px rgba(0, 0, 0, 0.42);
 }
 
 .musicOptBox {
   padding: 13px 13px 13px 22px;
   background: white;
-  margin: 19px 0;
+  margin: 19px 2px;
   border-radius: 7px;
   transition: .2s ease;
 }
@@ -93,6 +121,24 @@ p {
   padding: 2px 0px;
 }
 
+.page3 .musicOptBox a {
+  color: #00d2af;
+  text-decoration: none;
+}
+
+.page3 .musicOptBox .musicOptBox__title {
+  font-size: 40px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.page3 .musicOptBox .musicOptBox__desc {
+  color: #ffffff;
+  font-size: 14.5px;
+  margin-top: 10px;
+}
+
 .arrow-left {
   margin-top: -31px;
   float: left;
@@ -103,7 +149,7 @@ p {
   opacity: .5;
 }
 
-.musicOptBox.p2:hover .arrow-left {
+.musicOptBox.page2:hover .arrow-left {
     transition: .5s all;
     opacity: 1;
     margin-left: -43px;
@@ -128,26 +174,28 @@ p {
 footer {
     text-align: center;
     position: fixed;
-    height: 55px;
+    height: 62px;
     bottom: 0px;
     color: white;
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
+    z-index: -1;
 }
 
 
 
 
-.musicOptBox.p2 {
+.musicOptBox.page2 {
     margin-top: -10px;
     padding-left: 50px;
 }
 
 .pausePlayBtn {
-    font-size: 70px;
+    font-size: 66px;
     float: right;
     position: absolute;
+    text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.22);
 }
 
 .pausePlayContainer {

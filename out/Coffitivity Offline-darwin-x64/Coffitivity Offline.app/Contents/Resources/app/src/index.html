@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- for local debugging -->
   <link href="../assets/webfonts/fontello/css/fontello.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <script>
@@ -15,44 +17,73 @@
   <h1 class="mainTitle">Coffitivity Offline</h1>
 
 
-  <span class="p1">
-  <p class="mainTitle__subtext">Please select your cafe</p>
+  <span class="page1">
+  <p class="mainTitle__subtext"></p>
 
-  <div class="musicOptBox" id="murmur" onclick="triggerPage2(this.id)">
+  <div class="musicOptBox" id="murmur" onclick="playerPageFn(this.id)">
     <p class="musicOptBox__title">Morning Murmur</p>
     <p class="musicOptBox__desc">A gentle hum gets the day going</p>
     <i class="arrow-right icon-right-open"></i>
   </div>
 
-  <div class="musicOptBox" id="lunch" onclick="triggerPage2(this.id)">
+  <div class="musicOptBox" id="lunch" onclick="playerPageFn(this.id)">
     <p class="musicOptBox__title">Lunchtime Lounge</p>
     <p class="musicOptBox__desc">Busting chatter of the lunchtime rush</p>
     <i class="arrow-right icon-right-open"></i>
   </div>
 
-  <div class="musicOptBox" id="univ" onclick="triggerPage2(this.id)">
+  <div class="musicOptBox" id="univ" onclick="playerPageFn(this.id)">
     <p class="musicOptBox__title">University Undertones</p>
     <p class="musicOptBox__desc">The scholarly sounds of a campus cafe</p>
     <i class="arrow-right icon-right-open"></i>
   </div>
-</span>
+  </span>
 
-  <span class="p2">
+  <span class="page2">
     <img width="100%" src="../assets/headphones1.png">
     <div class="pausePlayContainer">
       <i class="pausePlayBtn icon-play"></i><i class="pausePlayBtn icon-pause"></i>
     </div>
-    <div class="musicOptBox p2" onclick="triggerPage1()">
+    <div class="musicOptBox page2" onclick="landingPageFn()">
       <p class="musicOptBox__title"></p>
       <p class="musicOptBox__desc"></p>
       <i class="arrow-left icon-left-open"></i>
     </div>
-</span>
+  </span>
+
+  <span class="page3">
+    <i class="icon-cancel"></i>
+    <div class="musicOptBox">
+      <p class="musicOptBox__title">About</p>
+      <p class="musicOptBox__desc">I am coffitivity.com's open-source cousin, and i run without the internet.<br>I recreate ambient sounds of cafes to boost your creativity, so you can produce better work.</p>
+      <p class="musicOptBox__desc">Coffitivity Offline is built by <a target="_blank" href="https://twitter.com/siwalik">@siwalik</a> in collaboration with <a target="_blank" href="https://twitter.com/Coffitivity">@Coffitivity</a>.</p>
+      <p class="musicOptBox__desc">You can report issues and bugs on <a rel="noreferrer" target="_blank"  href="https://github.com/siwalikm/coffitivity-offline/issues">Github Issues</a>.</p>
+      <p class="musicOptBox__desc">
+        <span>
+          <a href="https://github.com/siwalikm/coffitivity-offline" target="_blank">
+            <span class="links">
+              <i aria-hidden="true" class="icon-github-circled"></i> Fork us on GitHub
+            </span>
+          </a>
+        </span>
+      <br>
+      <span>
+        <a href="https://github.com/siwalikm/coffitivity-offline" target="_blank">
+          <span class="links">
+            <i aria-hidden="true" class="icon-twitter"></i> Share the love on Twitter
+          </span>
+        </a>
+      </span>
+
+      </p>
+    </div>
+  </span>
 
   <footer>
-    <a rel="noreferrer" target="_blank" href="https://twitter.com/intent/tweet?text=Checkout%20@Coffitivity%27s%20unofficial%20desktop%20app%20which%20runs%20without%20internet.%20%F0%9F%8E%A7%20%F0%9F%9A%80%20@siwalik%20www.bit.ly/CoffitivityOffline"><i title="Spread the love" class="footer-icon icon-twitter"></i></a>
+    <a rel="noreferrer" target="_blank" href="https://twitter.com/intent/tweet?text=Check%20out%20@Coffitivity%20for%20Desktop!%20You%20can%20listen%20to%20ambient%20music%20even%20when%20you%27re%20offline.%20%F0%9F%8E%A7%20%F0%9F%9A%80%20@siwalik%20siwalik.in/coffitivityOffline"><i title="Spread the love" class="footer-icon icon-twitter"></i></a>
 
     <a rel="noreferrer" target="_blank" href="https://github.com/siwalikm/coffitivity-offline/"><i title="Fork me on Github" class="footer-icon icon-github-circled"></i></a>
+    <a onclick="aboutPageFn()"><i title="Info" class="footer-icon icon-info-circled-alt"></i></a>
 
   </footer>
 </body>
