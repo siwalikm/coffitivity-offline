@@ -1,5 +1,6 @@
 import { app, BrowserWindow } from 'electron';
 const path = require('path');
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
@@ -14,7 +15,8 @@ const createWindow = () => {
   fullscreen: false,
   movable: true,
   icon: path.join(__dirname, '../assets/icon.ico')
-  })
+});
+
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
