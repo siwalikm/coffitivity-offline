@@ -17,18 +17,18 @@ i.icon-cancel {
     float: right;
     z-index: 100;
     position: relative;
-    margin-top: -333px;
+    margin-top: -320px;
     padding: 10px;
 }
 
 .page3 .musicOptBox{
-    height: 350px;
+    height: 280px;
     z-index: 10;
     background: #303c50;
     position: absolute;
-    margin-top: -333px;
-    margin-left: 0px;
-    width: 250px;
+    margin-top: -321px;
+    margin-left: 2px;
+    width: 245px;
 }
 
 .page3 .musicOptBox:hover {
