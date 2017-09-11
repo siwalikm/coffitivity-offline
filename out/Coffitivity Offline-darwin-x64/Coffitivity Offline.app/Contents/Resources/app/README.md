@@ -1,9 +1,14 @@
-# Coffitivity Offline 1.0.0
-Coffitivity.com's unofficial desktop app which runs without internet. 🎧 🚀
+<img style="cursor: zoom-in;" src="http://siwalik.in/coffitivityOffline/images/scrsht.jpg" width="100%">
 
+# Coffitivity Offline 1.0.0
+Coffitivity's desktop app built with the powers of web technology and ElectronJS. 🎧 🚀 
+
+>looking for Download? [Go to Download page.](http://www.siwalik.in/coffitivityOffline/)
+
+### Reporting issues
+Please visit our [Github Issues Page](https://github.com/siwalikm/coffitivity-offline/issues) to discuss bugs and issues.
 
 ### Development Setup
-
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. We will also be using [Electron Forge](https://electronforge.io/) for building our desktop native app.
 Next open up Terminal or your favourite command line tool:
 
@@ -20,7 +25,8 @@ npm install
    # Run the app
 electron-forge start
 ```
-#### Building native app for MacOS
+#### Building native app
+(supports only MacOS for now)
 ```bash
    # Go into the repository
 cd coffitivity-offline
