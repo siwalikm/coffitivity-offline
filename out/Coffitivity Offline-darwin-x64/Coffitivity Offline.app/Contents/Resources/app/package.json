@@ -18,25 +18,21 @@
   ],
   "author": {
     "name": "siwalik",
-    "email": "hi@siwalik.in",
+    "email": "coffee@siwalik.in",
     "url": "siwalik.in"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/siwalikm/coffitivity-offline.git"
   },
   "license": "MIT",
   "config": {},
   "dependencies": {
-    "electron-compile": "^6.4.1"
+    "electron-compile": "^6.4.1",
+    "electron-simple-updater": "^1.2.1"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "electron-forge": "^4.0.0",
-    "electron-prebuilt-compile": "1.7.5",
-    "eslint": "^3.19.0"
+    "electron-prebuilt-compile": "1.7.5"
   },
   "originalMain": "src/index.js"
 }

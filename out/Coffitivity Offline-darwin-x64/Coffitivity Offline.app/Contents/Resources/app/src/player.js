@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   $play = document.querySelector('.pausePlayBtn.icon-play');
 
   document.querySelector('.pausePlayContainer').addEventListener("click", () => {
-    if ($pause.style.visibility == 'visible') {
+    if ($pause.style.visibility === 'visible') {
       audioFile.pause();
       $pause.style.visibility = 'hidden';
       $play.style.visibility = 'visible';
@@ -35,9 +35,9 @@ let playerPageFn = (id) => {
   let selectedMusicTitle = selectedMusicId.querySelector('.musicOptBox__title').innerText;
   let selectedMusicDesc = selectedMusicId.querySelector('.musicOptBox__desc').innerText;
 
-  if (_cachedSelectedMusicId == undefined) {
+  if (_cachedSelectedMusicId === undefined) {
     audioFile = new Audio('../assets/' + id + '.mp3');
-  } else if (_cachedSelectedMusicId != selectedMusicId) {
+  } else if (_cachedSelectedMusicId !== selectedMusicId) {
     audioFile.src = '../assets/' + id + '.mp3';
   }
   audioFile.play();
