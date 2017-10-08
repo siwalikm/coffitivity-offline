@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, globalShortcut } from 'electron';
 const path = require('path');
 
 // Auto-updater module for electron-simple-updater package
@@ -50,7 +50,12 @@ const createWindow = () => {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow);
+app.on('ready', () => {
+  createWindow();
+  globalShortcut.register('esc', () => {
+      BrowserWindow.getFocusedWindow().minimize();
+  });
+});
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {

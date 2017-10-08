@@ -8,26 +8,45 @@ let subtextArr = ['Where do you want to be teleported?',
 
 let randomSubtext = subtextArr[Math.floor(Math.random() * subtextArr.length)];
 
+
+$pause = document.querySelector('.pausePlayBtn.icon-pause');
+$play = document.querySelector('.pausePlayBtn.icon-play');
+
+let playAudio = () => {
+    if ($pause.style.visibility === 'visible') {
+        audioFile.pause();
+        $pause.style.visibility = 'hidden';
+        $play.style.visibility = 'visible';
+    } else {
+        audioFile.play();
+        $pause.style.visibility = 'visible';
+        $play.style.visibility = 'hidden';
+    }
+}
 document.addEventListener("DOMContentLoaded", (event) => {
   document.querySelector('.mainTitle__subtext').innerText = randomSubtext;
   $pause = document.querySelector('.pausePlayBtn.icon-pause');
   $play = document.querySelector('.pausePlayBtn.icon-play');
 
   document.querySelector('.pausePlayContainer').addEventListener("click", () => {
-    if ($pause.style.visibility === 'visible') {
-      audioFile.pause();
-      $pause.style.visibility = 'hidden';
-      $play.style.visibility = 'visible';
-    } else {
-      audioFile.play();
-      $pause.style.visibility = 'visible';
-      $play.style.visibility = 'hidden';
-    }
+      playAudio();
   });
 
   document.querySelector('.icon-cancel').addEventListener("click", () => {
       document.querySelector('.page3').style.display = 'none';
   });
+});
+
+window.addEventListener("keydown", function(e){
+    if(e.keyCode === 80) {
+        e.preventDefault();
+       playAudio();
+    }
+
+    if(e.keyCode === 37) {
+        e.preventDefault();
+        landingPageFn();
+    }
 });
 
 let playerPageFn = (id) => {
