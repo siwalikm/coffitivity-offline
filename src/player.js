@@ -69,7 +69,11 @@ let playerPageFn = (id) => {
     audioFile.src = '../assets/' + id + '.mp3';
   }
   audioFile.play();
-  audioFile.loop = true;
+  // The loop property is not always supported so add an event listener instead
+  audioFile.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+  }, false);
   $pause.style.visibility = 'visible';
   $play.style.visibility = 'hidden';
 
