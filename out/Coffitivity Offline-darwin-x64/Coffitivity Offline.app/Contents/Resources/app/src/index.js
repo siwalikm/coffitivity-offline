@@ -1,12 +1,6 @@
 import { app, BrowserWindow, globalShortcut } from 'electron';
 const path = require('path');
 
-// Auto-updater module for electron-simple-updater package
-// url: https://www.npmjs.com/package/electron-simple-updater
-const updater = require('electron-simple-updater');
-updater.init('https://raw.githubusercontent.com/siwalikm/coffitivity-offline/master/src/updates.json');
-
-
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;

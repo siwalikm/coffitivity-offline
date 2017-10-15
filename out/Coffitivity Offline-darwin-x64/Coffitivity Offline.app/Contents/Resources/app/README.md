@@ -1,6 +1,6 @@
 <img style="cursor: zoom-in;" src="http://siwalik.in/coffitivityOffline/images/scrsht.jpg" width="100%">
 
-# Coffitivity Offline 1.0.0
+# Coffitivity Offline 1.0.1
 Coffitivity's desktop app built with the powers of web technology and ElectronJS. 🎧 🚀 
 
 >looking for Download? [Go to Download page.](http://www.siwalik.in/coffitivityOffline/)

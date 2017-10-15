@@ -1,7 +1,7 @@
 {
   "name": "coffitivity-offline",
   "productName": "coffitivity-offline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An unnoficial Coffitivity.com music app for your computer which works offline.",
   "main": "src/index.js",
   "scripts": {
@@ -61,8 +61,7 @@
     }
   },
   "dependencies": {
-    "electron-compile": "^6.4.1",
-    "electron-simple-updater": "^1.2.1"
+    "electron-compile": "^6.4.1"
   },
   "devDependencies": {
     "babel-plugin-transform-async-to-generator": "^6.24.1",

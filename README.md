@@ -1,6 +1,8 @@
 <img style="cursor: zoom-in;" src="http://siwalik.in/coffitivityOffline/images/scrsht.jpg" width="100%">
 
-# Coffitivity Offline 1.0.0
+# Coffitivity Offline
+>latest version 1.0.1
+>Fixes is current version => audio loop bug fix and added keyboard shortcuts
 Coffitivity's desktop app built with the powers of web technology and ElectronJS. 🎧 🚀 
 
 >looking for Download? [Go to Download page.](http://www.siwalik.in/coffitivityOffline/)
