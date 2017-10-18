@@ -1,14 +1,22 @@
-@font-face {
-  font-family: 'Grand Hotel';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../assets/webfonts/GrandHotel.woff2') format('woff2');
+.version {
+    float: right;
+    margin-top: -34px;
+    margin-right: 87px;
+    color: rgba(255, 255, 255, 0.24);
 }
+
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../assets/webfonts/roboto.woff2') format('woff2');
+    font-family: 'Grand Hotel';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/webfonts/GrandHotel.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/webfonts/roboto.woff2') format('woff2');
 }
 
 i.icon-cancel {
@@ -21,7 +29,7 @@ i.icon-cancel {
     padding: 10px;
 }
 
-.page3 .musicOptBox{
+.page3 .musicOptBox {
     height: 280px;
     z-index: 10;
     background: #303c50;
@@ -32,26 +40,27 @@ i.icon-cancel {
 }
 
 .page3 .musicOptBox:hover {
-  cursor: default;
-  box-shadow: none;
+    cursor: default;
+    box-shadow: none;
 }
 
 .player {
-  visibility: hidden;
+    visibility: hidden;
 }
 
-.page2, .page3 {
-  display: none;
-  transition: 1s all;
+.page2,
+.page3 {
+    display: none;
+    transition: 1s all;
 }
 
 html {
-  -webkit-app-region: drag;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(-245deg, #00a798 10%, #81a4e0 100%);
-  /*background-image: src('../assets');*/
-  height: 100%;
-  width: 100%;
+    -webkit-app-region: drag;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(-245deg, #00a798 10%, #81a4e0 100%);
+    /*background-image: src('../assets');*/
+    height: 100%;
+    width: 100%;
 }
 
 .footer-icon {
@@ -73,80 +82,80 @@ html {
 }
 
 .mainTitle {
-  font-family: 'Grand Hotel', cursive;
-  color: rgb(255, 255, 255);
-  margin: 22px 0 0 0;
-  text-align: -webkit-center;
-  font-weight: 400;
-  font-size: 37px;
-  text-shadow: 6px 6px 17px rgba(63, 64, 66, 0.68);
+    font-family: 'Grand Hotel', cursive;
+    color: rgb(255, 255, 255);
+    margin: 22px 0 0 0;
+    text-align: -webkit-center;
+    font-weight: 400;
+    font-size: 37px;
+    text-shadow: 6px 6px 17px rgba(63, 64, 66, 0.68);
 }
 
 p {
-  margin: 0;
+    margin: 0;
 }
 
 .mainTitle__subtext {
-  margin: 38px  0 30px 0;
-  color: #ffffff;
-  font-size: 15px;
-  letter-spacing: 0.2px;
-  font-weight: 600;
-  text-align: center;
-  /* text-transform: uppercase; */
-  text-shadow: 6px 6px 20px rgba(0, 0, 0, 0.42);
+    margin: 38px 0 30px 0;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    font-weight: 600;
+    text-align: center;
+    /* text-transform: uppercase; */
+    text-shadow: 6px 6px 20px rgba(0, 0, 0, 0.42);
 }
 
 .musicOptBox {
-  padding: 13px 13px 13px 22px;
-  background: white;
-  margin: 19px 2px;
-  border-radius: 7px;
-  transition: .2s ease;
+    padding: 13px 13px 13px 22px;
+    background: white;
+    margin: 19px 2px;
+    border-radius: 7px;
+    transition: .2s ease;
 }
 
 .musicOptBox:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     cursor: pointer;
 }
 
 .musicOptBox__title {
-  color: #00a79d;
-  font-size: 21px;
+    color: #00a79d;
+    font-size: 21px;
 }
 
 .musicOptBox__desc {
-  color: #648bcc;
-  font-size: 12px;
-  padding: 2px 0px;
+    color: #648bcc;
+    font-size: 12px;
+    padding: 2px 0px;
 }
 
 .page3 .musicOptBox a {
-  color: #00d2af;
-  text-decoration: none;
+    color: #00d2af;
+    text-decoration: none;
 }
 
 .page3 .musicOptBox .musicOptBox__title {
-  font-size: 40px;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .page3 .musicOptBox .musicOptBox__desc {
-  color: #ffffff;
-  font-size: 14.5px;
-  margin-top: 10px;
+    color: #ffffff;
+    font-size: 14.5px;
+    margin-top: 10px;
 }
 
 .arrow-left {
-  margin-top: -31px;
-  float: left;
-  margin-left: -40px;
-  font-size: 22px;
-  color: #81a4e0;
-  transition: .5s all;
-  opacity: .5;
+    margin-top: -31px;
+    float: left;
+    margin-left: -40px;
+    font-size: 22px;
+    color: #81a4e0;
+    transition: .5s all;
+    opacity: .5;
 }
 
 .musicOptBox.page2:hover .arrow-left {
@@ -156,13 +165,13 @@ p {
 }
 
 .arrow-right {
-  margin-top: -31px;
-  float: right;
-  margin-right: 2px;
-  font-size: 22px;
-  color: #81a4e0;
-  transition: .5s all;
-  opacity: .5;
+    margin-top: -31px;
+    float: right;
+    margin-right: 2px;
+    font-size: 22px;
+    color: #81a4e0;
+    transition: .5s all;
+    opacity: .5;
 }
 
 .musicOptBox:hover .arrow-right {
@@ -183,9 +192,6 @@ footer {
     z-index: -1;
 }
 
-
-
-
 .musicOptBox.page2 {
     margin-top: -10px;
     padding-left: 50px;
@@ -199,9 +205,9 @@ footer {
 }
 
 .pausePlayContainer {
-  cursor: pointer;
-  position: absolute;
-  margin-top: -140px;
-  color: #ffffff;
-  margin-left: 95px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -140px;
+    color: #ffffff;
+    margin-left: 95px;
 }

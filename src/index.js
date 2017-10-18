@@ -1,5 +1,10 @@
-import { app, BrowserWindow, globalShortcut } from 'electron';
+import {
+  app,
+  BrowserWindow,
+  globalShortcut
+} from 'electron';
 const path = require('path');
+process.env.appVersion = app.getVersion();
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -7,30 +12,28 @@ let mainWindow;
 const createWindow = () => {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-  width: 300,
-  height: 500,
-  resizable: false,
-  titleBarStyle: 'hidden',
-  fullscreen: false,
-  movable: true,
-  icon: path.join(__dirname, '../assets/icon.ico')
-});
-
+    width: 300,
+    height: 500,
+    resizable: false,
+    titleBarStyle: 'hidden',
+    fullscreen: false,
+    movable: true,
+    icon: path.join(__dirname, '../assets/icon.ico')
+  });
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
   // handling url on-clicks to open in default browser
   var handleRedirect = (e, url) => {
-    if(url != mainWindow.webContents.getURL()) {
+    if (url != mainWindow.webContents.getURL()) {
       e.preventDefault()
       require('electron').shell.openExternal(url)
     }
-  }
+  };
 
-  mainWindow.webContents.on('will-navigate', handleRedirect)
-  mainWindow.webContents.on('new-window', handleRedirect)
-
+  mainWindow.webContents.on('will-navigate', handleRedirect);
+  mainWindow.webContents.on('new-window', handleRedirect);
 
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {
@@ -44,11 +47,18 @@ const createWindow = () => {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', () => {
-  createWindow();
+app.on('ready', createWindow);
+
+// setting shortcut on app focus
+app.on('browser-window-focus', () => {
   globalShortcut.register('esc', () => {
-      BrowserWindow.getFocusedWindow().minimize();
+    BrowserWindow.getFocusedWindow().minimize();
   });
+});
+
+// removing shortcut on app blur
+app.on('browser-window-blur', () => {
+  globalShortcut.unregister('esc');
 });
 
 // Quit when all windows are closed.
@@ -67,6 +77,3 @@ app.on('activate', () => {
     createWindow();
   }
 });
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.

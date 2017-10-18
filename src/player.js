@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('keydown', function (e) {
-  if (e.keyCode === 80 || e.keyCode === 32) { 
+  if (e.keyCode === 80 || e.keyCode === 32) {
     // keycode for 'p' button or 'spacebar' to pause-play
     e.preventDefault();
     playAudio();
   }
 
-  if (e.keyCode === 37) { 
+  if (e.keyCode === 37) {
     // keycode for 'left-arrow' button for menu-page
     e.preventDefault();
     landingPageFn();
@@ -70,7 +70,7 @@ let playerPageFn = (id) => {
   }
   audioFile.play();
   // The loop property is not always supported so add an event listener instead
-  audioFile.addEventListener('ended', function() {
+  audioFile.addEventListener('ended', function () {
     this.currentTime = 0;
     this.play();
   }, false);

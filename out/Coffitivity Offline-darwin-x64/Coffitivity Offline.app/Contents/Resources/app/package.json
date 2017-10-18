@@ -1,7 +1,7 @@
 {
   "name": "coffitivity-offline",
   "productName": "coffitivity-offline",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An unnoficial Coffitivity.com music app for your computer which works offline.",
   "main": "es6-shim.js",
   "scripts": {

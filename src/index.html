@@ -6,9 +6,6 @@
   <!-- for local debugging -->
   <link href="../assets/webfonts/fontello/css/fontello.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <script>
-    require('./renderer.js')
-  </script>
   <script src="./player.js"></script>
   <meta charset="UTF-8">
 </head>
@@ -55,6 +52,8 @@
     <i class="icon-cancel"></i>
     <div class="musicOptBox">
       <p class="musicOptBox__title">About</p>
+      <span class="version"><script>document.write(' v',process.env.appVersion)</script></span>
+
       <p class="musicOptBox__desc">
         I am coffitivity.com's open-source cousin, and i run without the internet.<br>I recreate ambient sounds of cafes to boost your creativity, so you can produce better work.</p>
       <p class="musicOptBox__desc">
