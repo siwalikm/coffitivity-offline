@@ -1,4 +1,4 @@
-let audioFile, $pause, $play, _cachedSelectedMusicId;
+let audioFile, $pause, $play, _cachedSelectedMusicId, volume;
 let subtextArr = ['Where do you want to be teleported?',
   'Make your pick and start making things',
   'Pick your mood before you make things',
@@ -69,6 +69,7 @@ let playerPageFn = (id) => {
     audioFile.src = '../assets/' + id + '.mp3';
   }
   audioFile.play();
+  audioFile.volume = volume;
   // The loop property is not always supported so add an event listener instead
   audioFile.addEventListener('ended', function () {
     this.currentTime = 0;
@@ -98,4 +99,17 @@ let landingPageFn = () => {
 
 let aboutPageFn = () => { //  eslint-disable-line
   document.querySelector('.page3').style.display = 'block';
+};
+
+let changeVolumeFn = (event) => {
+  volume = event.currentTarget.value;
+  if (audioFile) {
+    audioFile.volume = volume;
+  }
+  let volumeIcon = document.getElementById('volume-icon');
+  if (volume === '0') {
+    volumeIcon.src = __dirname + '/../assets/mute-volume.png';
+  } else {
+    volumeIcon.src = __dirname + '/../assets/volume.png';
+  }
 };
