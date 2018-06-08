@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.icon-cancel').addEventListener('click', () => {
     document.querySelector('.page3').style.display = 'none';
   });
+
+  volume = localStorage.getItem('volume') === null ? 1 : localStorage.getItem('volume');
+  document.getElementById('volumeControl').value = volume;
 });
 
 window.addEventListener('keydown', function (e) {
@@ -103,6 +106,8 @@ let aboutPageFn = () => { //  eslint-disable-line
 
 let changeVolumeFn = (event) => {
   volume = event.currentTarget.value;
+  // Saving volume
+  localStorage.setItem('volume', volume);
   if (audioFile) {
     audioFile.volume = volume;
   }

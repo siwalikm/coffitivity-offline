@@ -217,7 +217,8 @@ footer {
     position: absolute;
     right: 14px;
     left: 10px;
-    bottom: 68px;
+    bottom: 65px;
+    -webkit-app-region: no-drag;
 }
 
 .volume-slider {
@@ -245,4 +246,5 @@ footer {
 .volume-icon {
     width: 5%;
     float: left;
+    -webkit-user-select: none;
 }
