@@ -211,38 +211,3 @@ footer {
     color: #ffffff;
     margin-left: 95px;
 }
-
-.volume-block {
-    border-radius: 7px;
-    position: absolute;
-    right: 14px;
-    left: 10px;
-    bottom: 68px;
-}
-
-.volume-slider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 95%;
-    height: 2px;
-    background: rgb(48, 60, 80);
-    outline: none;
-    display: block;
-    margin-top: 6px;
-    margin-left: 16px;
-}
-
-.volume-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgb(48, 60, 80);
-    cursor: pointer;
-}
-
-.volume-icon {
-    width: 5%;
-    float: left;
-}
