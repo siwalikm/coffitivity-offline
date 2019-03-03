@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>BuildMachineOSBuild</key>
-    <string>16E195</string>
+    <string>16G1710</string>
     <key>CFBundleDisplayName</key>
     <string>Coffitivity Offline</string>
     <key>CFBundleExecutable</key>
@@ -22,18 +22,20 @@
     <string>1.0.2</string>
     <key>CFBundleVersion</key>
     <string>1.0.2</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
     <key>DTSDKBuild</key>
-    <string>14D125</string>
+    <string>10.12</string>
     <key>DTSDKName</key>
-    <string>macosx10.1010.10</string>
+    <string>macosx10.12</string>
     <key>DTXcode</key>
-    <string>0821</string>
+    <string>0833</string>
     <key>DTXcodeBuild</key>
-    <string>8C1002</string>
+    <string>8E3004b</string>
     <key>LSApplicationCategoryType</key>
     <string>public.app-category.developer-tools</string>
     <key>LSMinimumSystemVersion</key>
-    <string>10.9.0</string>
+    <string>10.10.0</string>
     <key>NSHighResolutionCapable</key>
     <true/>
     <key>NSMainNibFile</key>
